@@ -2,12 +2,12 @@
 # Don't put secrets here!
 # Put them in .decompose/elements where they won't get checked in.
 PROJECT_ENVIRONMENT="production"
-PROJECT_NGINX_VIRTUAL_HOST="shout.upgradeya.com"
-PROJECT_NGINX_VIRTUAL_HOST_ALTS="www.shout.upgradeya.com"
+PROJECT_NGINX_VIRTUAL_HOST="lounge.upgradeya.com"
+PROJECT_NGINX_VIRTUAL_HOST_ALTS="www.lounge.upgradeya.com"
 # Set this site as default.
 #PROJECT_NGINX_DEFAULT_HOST="mysite.local"
 
 # To prevent volume collisions.
-PROJECT_NAMESPACE="shout"
+PROJECT_NAMESPACE="lounge"
 
 # vim:syntax=sh
