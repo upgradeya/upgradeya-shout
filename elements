@@ -10,4 +10,7 @@ PROJECT_NGINX_VIRTUAL_HOST_ALTS="www.lounge.upgradeya.com"
 # To prevent volume collisions.
 PROJECT_NAMESPACE="lounge"
 
+# Turn production mode on by default
+PROJECT_PRODUCTION=true
+
 # vim:syntax=sh

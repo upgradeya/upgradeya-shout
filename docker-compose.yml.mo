@@ -13,6 +13,9 @@ lounge:
     - LETSENCRYPT_EMAIL={{PROJECT_LETSENCRYPT_EMAIL}}
 {{/PROJECT_LETSENCRYPT}}
   command: lounge --port "9000" --private
+{{#PRODUCTION}}
+  restart: always
+{{/PRODUCTION}}
 lounge_volumes:
   image: busybox
   command: echo "Lounge files container. Doing nothing."
