@@ -1,8 +1,10 @@
 lounge:
-  image: rgarrigue/thelounge
+  image: thelounge/lounge
   log_driver: {{PROJECT_DOCKER_LOG_DRIVER}}
   volumes_from:
     - lounge_volumes
+  ports:
+    - "9000:9000"
   environment:
     - VIRTUAL_HOST={{PROJECT_NGINX_PROXY_VIRTUAL_HOSTS}}
     - VIRTUAL_PORT=9000
@@ -12,7 +14,7 @@ lounge:
     - LETSENCRYPT_HOST={{PROJECT_NGINX_PROXY_VIRTUAL_HOSTS}}
     - LETSENCRYPT_EMAIL={{PROJECT_LETSENCRYPT_EMAIL}}
 {{/PROJECT_LETSENCRYPT}}
-  command: lounge --port "9000" --private
+  command: lounge start --port "9000" --private
 {{#PRODUCTION}}
   restart: always
 {{/PRODUCTION}}
