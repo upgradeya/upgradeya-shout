@@ -1,5 +1,5 @@
 lounge:
-  image: thelounge/lounge
+  image: thelounge/thelounge
   log_driver: {{PROJECT_DOCKER_LOG_DRIVER}}
   volumes_from:
     - lounge_volumes
