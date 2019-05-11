@@ -14,7 +14,7 @@ lounge:
     - LETSENCRYPT_HOST={{PROJECT_NGINX_PROXY_VIRTUAL_HOSTS}}
     - LETSENCRYPT_EMAIL={{PROJECT_LETSENCRYPT_EMAIL}}
 {{/PROJECT_LETSENCRYPT}}
-  command: thelounge start --port "9000" --private
+  command: thelounge start -c --port "9000" --private
 {{#PRODUCTION}}
   restart: always
 {{/PRODUCTION}}
